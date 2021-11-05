@@ -247,10 +247,17 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
 function get20s(array) {
-  
+  const datesInRange = [];
+  for(let i = 0; i < array.length; i++){
+    if(array[i] >= 1900 && array[i] <= 2000)
+    array.split(' ');
+  } {
+    datesInRange.push(array[i]);
+  }
+  return datesInRange;
 }
 
-
+console.log(get20s(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
@@ -261,9 +268,9 @@ Use removeArtist to do the following:
 
 For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(array) {
+function removeArtist(array, number) {
   array.shift();
-  return artists.length;
+  return artists[number].length;
 }
 console.log(removeArtist(artists));
 
@@ -307,9 +314,21 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+//check indexes 
+//check how many artists have painted over 100 paintings 
+
+function lotsOfArt(array) {
+
+  const filtered = [];
+
+  for(let i = 0; i < artists.length; i++){
+    if(artists[i].paintings >= '100'){
+      filtered.push(artists[i].name);
+    }
+    }
+   return filtered;
 }
+console.log(lotsOfArt(artists)); 
 
 
 /* ***** END OF TASKS ***** */
