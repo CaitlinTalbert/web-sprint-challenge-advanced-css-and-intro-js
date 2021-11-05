@@ -134,3 +134,21 @@ button:hover{
 .artist img{
     width:100%;
 }
+
+/*Responsive Styles*/
+/*500px- mobile view*/
+
+@media (max-width: 500px){
+    .artists-container{
+        align-items:center;
+        
+    }
+    .artists .img{
+        height:50%;
+    }
+   
+
+
+}
+
+/*media query close for mobile*/
